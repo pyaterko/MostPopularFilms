@@ -16,6 +16,8 @@ object Releases {
 
 object Modules {
     const val app = ":app"
+    const val list_screen = ":list_screen"
+    const val domain = ":domain"
 }
 
 object Versions {
@@ -82,7 +84,7 @@ object Lifecycle {
 //управляет жизненным циклом ViewBinding и очищает ссылку на него для предотвращения утечек памяти
 object ViewBindingDelegate {
     const val viewbindingpropertydelegate =
-       "com.github.kirich1409:viewbindingpropertydelegate:${Versions.viewBindingDelegate}"
+        "com.github.kirich1409:viewbindingpropertydelegate:${Versions.viewBindingDelegate}"
     const val noreflection =
         "com.github.kirich1409:viewbindingpropertydelegate-noreflection:${Versions.viewBindingDelegate}"
 }
@@ -151,5 +153,9 @@ object Navigation {
 
 object UnitRunner {
     const val unitRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+}
+object Consumer {
+    const val consumerProguardFiles= "consumer-rules.pro"
 
 }

@@ -39,6 +39,10 @@ android {
         Properties properties = new Properties()
         properties.load(project.rootProject.file("local.properties").newDataInputStream())
         //TheMovieDb https://developers.themoviedb.org/3/getting-started/introduction
+        //        MOVIE_API_KEY="YOU_API_KEY"
+        //        MOVIE_BASE_URL="https://api.themoviedb.org/3/"
+        //        MOVIE_POSTER_PATH="https://image.tmdb.org/t/p/original/"
+        //        MOVIE_BACKDROP_PATH="https://image.tmdb.org/t/p/original/"
         def movieApiKey = properties.getProperty("MOVIE_API_KEY", "")
         it.buildConfigField "String", "MOVIE_API_KEY", movieApiKey
         def movieBaseUrl = properties.getProperty("MOVIE_BASE_URL", "")
@@ -69,4 +73,8 @@ dependencies {
     implementation Glide.glide
     implementation Glide.glideIntegration
     kapt Glide.glide_compiler
+    implementation Retrofit.converter_gson
+    implementation Retrofit.adapter_coroutines
+    implementation Retrofit.retrofit
+
 }
