@@ -1,7 +1,5 @@
 package com.owl_laugh_at_wasted_time.list_screen.fragment.adapter
 
-import android.graphics.Color
-import android.util.Log
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -10,12 +8,13 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
-import com.owl_laugh_at_wasted_time.domain.entity.MoviesResponse
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.BuildConfig
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
 import com.owl_laugh_at_wasted_time.mostpopularfilms.databinding.ItemFilmBinding
-import java.text.SimpleDateFormat
-import java.util.*
+import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.click
+import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.getColorByValue
+import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.releaseDateToString
 import kotlin.math.roundToInt
 
 class MovieViewHolder(
@@ -63,47 +62,3 @@ class MovieViewHolder(
         private const val DELAY = 800
     }
 }
-
-fun getColorByValue(value: Int): Int =
-    try {
-        when (value) {
-            in 0..25 -> Color.parseColor("#FF0000")
-            in 26..50 -> Color.parseColor("#FF8C00")
-            in 51..75 -> Color.parseColor("#FFFF00")
-            else -> Color.parseColor("#00FF00")
-        }
-    } catch (err: Exception) {
-        Log.d("VVVV", "${err.localizedMessage}")
-        0
-    }
-
-fun View.click(click: () -> Unit) = setOnClickListener { click() }
-
-fun releaseDateToString(date: String): String? {
-    return try {
-        var result: String = ""
-        toDateString(date)?.let { date ->
-            date.split(" ").forEach {
-                result += it.replaceFirstChar(Char::titlecase) + " "
-            }
-        }
-        result
-    } catch (err: Exception) {
-        null
-    }
-}
-
-fun toDateString(value: String): String? =
-    try {
-        SimpleDateFormat(DATE_FORMAT_IN, Locale.getDefault())
-            .parse(value)?.let { date ->
-                SimpleDateFormat(DATE_FORMAT_OUT, Locale.getDefault()).format(date)
-            }
-    } catch (err: Exception) {
-        null
-    }
-
-
-const val DATE_FORMAT_IN = "yyyy-MM-dd"
-const val DATE_FORMAT_OUT = "dd MMMM yyyy"
-const val TIME_STRING_TEMPLATE = "%sч %sм"

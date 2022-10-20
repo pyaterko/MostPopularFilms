@@ -5,7 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.ListFilmFragment">
+    android:background="@drawable/bg_gradient"
+    tools:context=".ui.fragments.list.ListFilmFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_film"
@@ -15,5 +16,14 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/item_film"/>
 
-
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="visible"
+        android:layout_gravity="bottom"
+        app:indeterminateAnimationType="contiguous"
+        app:indicatorColor="@array/progress_colors"
+        tools:visibility="visible" />
 </FrameLayout>

@@ -4,24 +4,16 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.owl_laugh_at_wasted_time.domain.entity.MoviesResponse
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
-
 
 class MovieAdapter(private val delegate: Delegate?) :
     RecyclerView.Adapter<MovieViewHolder?>() {
 
     interface Delegate {
-        /**
-         * Событие наступает при выборе
-         * фильма из списка.
-         * @param movie Фильм
-         */
+
         fun onItemClick(movie: MoviesResponse.Movie)
 
-        /**
-         * Получить следующую порцию фильмов
-         */
         fun getMoreMovies()
     }
 

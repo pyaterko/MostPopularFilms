@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Most Popular Films</string>
+    <string name="description">Описание</string>
+    <string name="actor_list">Актерский состав</string>
 </resources>

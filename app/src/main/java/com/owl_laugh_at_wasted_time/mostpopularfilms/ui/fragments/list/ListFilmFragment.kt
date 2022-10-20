@@ -1,10 +1,11 @@
-package com.owl_laugh_at_wasted_time.mostpopularfilms.fragments
+package com.owl_laugh_at_wasted_time.mostpopularfilms.ui.fragments.list
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
-import com.owl_laugh_at_wasted_time.domain.entity.MoviesResponse
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.list_screen.fragment.adapter.MovieAdapter
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
 import com.owl_laugh_at_wasted_time.mostpopularfilms.databinding.FragmentListFilmsBinding
@@ -25,7 +26,7 @@ class ListFilmFragment : Fragment(R.layout.fragment_list_films), MovieAdapter.De
             "Король Лев (1994) Львенок Симба бросает вызов дяде-убийце.",
             7.1,
             null,
-            "",
+            "10.8.22",
             "Король Лев (1994)",
             true,
             9.1,
@@ -103,6 +104,7 @@ class ListFilmFragment : Fragment(R.layout.fragment_list_films), MovieAdapter.De
     )
 
     override fun onItemClick(movie: MoviesResponse.Movie) {
+        findNavController().navigate(ListFilmFragmentDirections.actionListFilmFragmentToDetailsFragment())
 
     }
 
