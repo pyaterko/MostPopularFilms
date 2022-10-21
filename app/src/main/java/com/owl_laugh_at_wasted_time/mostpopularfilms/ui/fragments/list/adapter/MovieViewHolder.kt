@@ -1,4 +1,4 @@
-package com.owl_laugh_at_wasted_time.list_screen.fragment.adapter
+package com.owl_laugh_at_wasted_time.mostpopularfilms.ui.fragments.list.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
@@ -8,10 +8,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.BuildConfig
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
 import com.owl_laugh_at_wasted_time.mostpopularfilms.databinding.ItemFilmBinding
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.click
 import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.getColorByValue
 import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.releaseDateToString
@@ -45,9 +45,9 @@ class MovieViewHolder(
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .transition(DrawableTransitionOptions().crossFade(DELAY))
                 .placeholder(R.drawable.ic_no_image)
-                .error(R.drawable.quin)
+                .error(R.drawable.ic_no_image)
                 .into(ivFilm)
-            viewBinding.tvDescription.click { delegate?.onItemClick(movie) }
+            viewBinding.cardView.click { delegate?.onItemClick(movie) }
             if (countItems > ZERO_VALUE && position == countItems - FIVE_VALUE) {
                 delegate?.getMoreMovies()
             }

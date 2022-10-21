@@ -3,8 +3,6 @@ package com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils
 import android.graphics.Color
 import android.util.Log
 import android.view.View
-import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*

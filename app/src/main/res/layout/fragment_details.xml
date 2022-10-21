@@ -11,7 +11,7 @@
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="380dp"
         android:background="@drawable/bg_gradient"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -21,7 +21,7 @@
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
+        android:layout_height="350dp"
         app:layoutDescription="@xml/activity_main_xml_constraintlayout_scene"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -32,7 +32,7 @@
             android:id="@+id/ivAlbum"
             android:layout_width="300dp"
             android:layout_height="370dp"
-            android:src="@drawable/quin"
+            android:src="@drawable/ic_no_image"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,10 +44,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="Король Лев (1994)"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivAlbum" />
+            app:layout_constraintTop_toBottomOf="@+id/ivAlbum"
+            tools:text="Король Лев (1994)" />
 
         <TextView
             android:id="@+id/textView5"
@@ -55,10 +55,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin_tiny"
-            android:text="BY STOPIFY &#8226; 4,200,666 FOLLOWERS"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvPlaylistTitle" />
+            app:layout_constraintTop_toBottomOf="@+id/tvPlaylistTitle"
+            tools:text=" 4,200,666 " />
 
         <ImageView
             android:id="@+id/ivBack"
@@ -99,6 +99,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/titleDescription"
                 style="@style/TitleTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -111,19 +112,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/default_margin_medium"
-                android:text="Король Лев (1994) Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце." />
+                android:layout_marginTop="@dimen/default_margin_small"
+                tools:text="Король Лев (1994) Львенок Симба бросает вызов дяде-убийце." />
 
             <TextView
                 style="@style/TitleTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_medium"
+                android:layout_marginTop="@dimen/default_margin_small"
                 android:text="@string/actor_list" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvActorsFoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/default_margin_small"
                 android:orientation="horizontal"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_actor" />
@@ -133,16 +137,15 @@
     </androidx.core.widget.NestedScrollView>
 
     <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progress"
+        android:id="@+id/progressDetails"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        android:visibility="visible"
+        android:visibility="invisible"
         app:indeterminateAnimationType="contiguous"
         app:indicatorColor="@array/progress_colors"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:visibility="visible" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>

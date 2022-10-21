@@ -39,6 +39,9 @@ android {
         Properties properties = new Properties()
         properties.load(project.rootProject.file("local.properties").newDataInputStream())
         //TheMovieDb https://developers.themoviedb.org/3/getting-started/introduction
+        //  для демонстрации работы MotionLayout в приложение без получения MOVIE_API_KEY в адаптерах
+        //  (ActorAdapter  MovieAdapter)
+        //  раскомментируйте код внутри списка
         //        MOVIE_API_KEY="YOU_API_KEY"
         //        MOVIE_BASE_URL="https://api.themoviedb.org/3/"
         //        MOVIE_POSTER_PATH="https://image.tmdb.org/t/p/original/"

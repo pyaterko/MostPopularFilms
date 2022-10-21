@@ -30,7 +30,6 @@ class ListFilmsViewModel @Inject constructor(
 
     override fun handleError(throwable: Throwable) {}
 
-
     fun getMoviesTopRated(adult: Boolean = false, page: Int = currentPage): Job =
         viewModelScopeCoroutine.launch {
             _moviesLiveData.postValue(AppState.Loading)
@@ -46,7 +45,6 @@ class ListFilmsViewModel @Inject constructor(
                 }
             }
         }
-
 
     companion object {
         private const val ONE_VALUE = 1

@@ -9,7 +9,7 @@
         android:id="@+id/listFilmFragment"
         android:name="com.owl_laugh_at_wasted_time.mostpopularfilms.ui.fragments.list.ListFilmFragment"
         android:label="fragment_list_films"
-        tools:layout="@layout/fragment_list_films" >
+        tools:layout="@layout/fragment_list_films">
         <action
             android:id="@+id/action_listFilmFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
@@ -18,5 +18,9 @@
         android:id="@+id/detailsFragment"
         android:name="com.owl_laugh_at_wasted_time.mostpopularfilms.ui.fragments.details.DetailsFragment"
         android:label="fragment_details"
-        tools:layout="@layout/fragment_details" />
+        tools:layout="@layout/fragment_details">
+        <argument
+            android:name="movie_id"
+            app:argType="integer" />
+    </fragment>
 </navigation>

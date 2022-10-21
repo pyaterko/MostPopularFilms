@@ -7,7 +7,6 @@ import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesRespons
 import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.state.AppState
 import javax.inject.Inject
 
-
 class RemoteDataSourceImpl @Inject constructor(private val movieApi: MovieApi) : RemoteDataSource {
     override suspend fun getMoviesTopRated(adult: Boolean, page: Int): AppState<MoviesResponse> =
         try {
@@ -42,8 +41,6 @@ class RemoteDataSourceImpl @Inject constructor(private val movieApi: MovieApi) :
         } catch (err: Exception) {
             AppState.Error(err)
         }
-
-
 
     companion object {
         const val NO_DATA = "Отсутствуют данные"

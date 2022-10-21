@@ -8,10 +8,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.ActorsResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.BuildConfig
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
 import com.owl_laugh_at_wasted_time.mostpopularfilms.databinding.ItemActorBinding
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.ActorsResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.utils.click
 
 class ActorViewHolder(

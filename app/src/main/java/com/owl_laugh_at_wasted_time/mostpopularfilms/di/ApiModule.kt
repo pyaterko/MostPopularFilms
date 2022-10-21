@@ -39,7 +39,6 @@ class ApiModule {
             .build()
     }
 
-
     @Singleton
     @Provides
     fun initApiWorker() = Retrofit.Builder()
@@ -49,6 +48,5 @@ class ApiModule {
         .addConverterFactory(GsonConverterFactory.create())
         .build()
         .create(MovieApi::class.java)
-
 
 }

@@ -8,8 +8,8 @@
     android:layout_margin="@dimen/actor_items_margin"
     android:backgroundTint="@null"
     android:clickable="true"
-    android:focusable="true"
     android:elevation="@dimen/default_margin_small"
+    android:focusable="true"
     app:cardCornerRadius="@dimen/actor_items_radius">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +43,7 @@
             app:layout_constraintBottom_toTopOf="@id/character"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/poster"
-            tools:text="@string/app_name"/>
+            tools:text="@string/app_name" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/character"
@@ -58,7 +58,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/name"
-            tools:text="@string/app_name"/>
+            tools:text="@string/app_name" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

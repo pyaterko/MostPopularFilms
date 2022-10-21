@@ -4,8 +4,8 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.ActorsResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.ActorsResponse
 
 class ActorAdapter(private val delegate: Delegate?) :
     RecyclerView.Adapter<ActorViewHolder?>() {
@@ -13,8 +13,35 @@ class ActorAdapter(private val delegate: Delegate?) :
     interface Delegate {
         fun onItemClick(actor: ActorsResponse.Cast)
     }
+//    для демонстрации работы MotionLayout в приложение без получения MOVIE_API_KEY
+//    раскомментируйте код внутри списка
 
-    private val data = ArrayList<ActorsResponse.Cast>()
+    private val data: ArrayList<ActorsResponse.Cast> = arrayListOf(
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        ),
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        ),
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        ),
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        ),
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        ),
+//        ActorsResponse.Cast(
+//            true, 1000, "dfdsf", "yjyu", 55, 22, "fggf",
+//            "ggggggg", 22, "llll", 2.3, "ooooo"
+//        )
+    )
 
     fun setItems(newList: List<ActorsResponse.Cast>) {
         val result = DiffUtil.calculateDiff(

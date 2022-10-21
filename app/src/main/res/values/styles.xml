@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="DefaultButtonStyle">
         <item name="android:textSize">@dimen/text_size_12sp</item>
         <item name="android:layout_height">@dimen/default_button_height</item>
@@ -8,6 +9,7 @@
         <item name="android:background">@drawable/btn_shuffle_style</item>
         <item name="android:padding">@dimen/default_padding_8dp</item>
     </style>
+
     <style name="FollowButtonStyle">
         <item name="android:textSize">@dimen/text_size_10sp</item>
         <item name="android:layout_height">@dimen/follow_button_height</item>
@@ -17,6 +19,7 @@
         <item name="android:background">@drawable/btn_follow_style</item>
         <item name="android:padding">@dimen/default_padding_8dp</item>
     </style>
+
     <style name="LyricsButtonStyle">
         <item name="android:textSize">@dimen/text_size_8sp</item>
         <item name="android:layout_height">@dimen/follow_button_height</item>

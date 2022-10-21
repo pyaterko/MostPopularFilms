@@ -1,11 +1,11 @@
-package com.owl_laugh_at_wasted_time.list_screen.fragment.adapter
+package com.owl_laugh_at_wasted_time.mostpopularfilms.ui.fragments.list.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 import com.owl_laugh_at_wasted_time.mostpopularfilms.R
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.entity.MoviesResponse
 
 class MovieAdapter(private val delegate: Delegate?) :
     RecyclerView.Adapter<MovieViewHolder?>() {
@@ -17,7 +17,95 @@ class MovieAdapter(private val delegate: Delegate?) :
         fun getMoreMovies()
     }
 
-    private val data = ArrayList<MoviesResponse.Movie>()
+//       для демонстрации работы MotionLayout в приложение без получения MOVIE_API_KEY
+//        раскомментируйте код внутри списка
+    private val data: ArrayList<MoviesResponse.Movie> = arrayListOf(
+//                MoviesResponse.Movie(
+//            true,
+//            "Onee is proof",
+//            emptyList(),
+//            2,
+//            "",
+//            "",
+//            "Король Лев (1994) Львенок Симба бросает вызов дяде-убийце.",
+//            7.1,
+//            null,
+//            "1963-03-01",
+//            "Король Лев (1994)",
+//            true,
+//            5.1,
+//            1
+//
+//        ),
+//        MoviesResponse.Movie(
+//            true,
+//            "Onee is proof",
+//            emptyList(),
+//            2,
+//            "",
+//            "",
+//            "Мэверик встречает лейтенанта Брэдли Брэдшоу — сына своего покойного друга, лейтенанта Ника Брэдшоу. ",
+//            7.1,
+//            null,
+//            "2022-07-29",
+//            "Топ Ган",
+//            true,
+//            7.1,
+//            1
+//
+//        ),
+//        MoviesResponse.Movie(
+//            true,
+//            "Onee is proof",
+//            emptyList(),
+//            2,
+//            "",
+//            "",
+//            "Однажды он посвящает своих подопечных в тайну Общества мёртвых поэтов..",
+//            6.1,
+//            null,
+//            "2022-07-29",
+//            "Гамильтон",
+//            true,
+//            9.1,
+//            1
+//
+//        ),
+//        MoviesResponse.Movie(
+//            true,
+//            "Onee is proof",
+//            emptyList(),
+//            2,
+//            "",
+//            "",
+//            " маленький Бродяга пускается на поиски денег",
+//            9.1,
+//            null,
+//            "2022-07-29",
+//            "Огни большого города",
+//            true,
+//            9.1,
+//            1
+//
+//        ),
+//        MoviesResponse.Movie(
+//            true,
+//            "Onee is proof",
+//            emptyList(),
+//            2,
+//            "",
+//            "",
+//            "Джон Китинг - новый преподаватель английской словесности в консервативном американском колледже.",
+//            5.3,
+//            null,
+//            "2022-07-29",
+//            "Джон Китинг",
+//            true,
+//            3.1,
+//            1
+//
+//        )
+    )
 
     fun setItems(newList: List<MoviesResponse.Movie>) {
         val result = DiffUtil.calculateDiff(

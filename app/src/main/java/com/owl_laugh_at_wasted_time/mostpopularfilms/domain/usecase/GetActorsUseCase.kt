@@ -5,7 +5,6 @@ import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.repository.MovieRepo
 import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.state.AppState
 import javax.inject.Inject
 
-
 class GetActorsUseCase @Inject constructor(private val repository: MovieRepository) {
     suspend fun execute(movieId: Int): AppState<ActorsResponse> =
         repository.getActorsList(movieId)
