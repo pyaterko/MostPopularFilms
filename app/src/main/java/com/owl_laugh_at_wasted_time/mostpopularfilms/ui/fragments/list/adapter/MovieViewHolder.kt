@@ -44,7 +44,7 @@ class MovieViewHolder(
                 .apply(RequestOptions.bitmapTransform(RoundedCorners(IMAGE_RADIUS)))
                 .diskCacheStrategy(DiskCacheStrategy.RESOURCE)
                 .transition(DrawableTransitionOptions().crossFade(DELAY))
-                .placeholder(R.drawable.quin)
+                .placeholder(R.drawable.ic_no_image)
                 .error(R.drawable.quin)
                 .into(ivFilm)
             viewBinding.tvDescription.click { delegate?.onItemClick(movie) }

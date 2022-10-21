@@ -9,6 +9,10 @@ import com.google.android.material.snackbar.Snackbar
 import java.text.SimpleDateFormat
 import java.util.*
 
+fun View.showSnakeBar(text: String, length: Int = Snackbar.LENGTH_SHORT) {
+    Snackbar.make(this, text, length).show()
+}
+
 fun View.click(click: () -> Unit) = setOnClickListener { click() }
 
 fun getColorByValue(value: Int): Int =

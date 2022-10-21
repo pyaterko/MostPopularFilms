@@ -4,10 +4,19 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.AppState
-import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.IAppState
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.state.AppState
+import com.owl_laugh_at_wasted_time.mostpopularfilms.domain.state.IAppState
+import com.owl_laugh_at_wasted_time.mostpopularfilms.ui.MainActivity
+import javax.inject.Inject
 
 abstract class BaseFragment(@LayoutRes contentLayoutId: Int) : Fragment(contentLayoutId) {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelFactory
+
+    val component by lazy {
+        (activity as MainActivity).component
+    }
 
     abstract fun initListeners()
     abstract fun initObservers()

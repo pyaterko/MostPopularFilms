@@ -9,16 +9,16 @@
 
     <ImageView
         android:id="@+id/ivFilm"
-        android:layout_width="130dp"
+        android:layout_width="100dp"
         android:layout_height="130dp"
-        android:layout_marginTop="4dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:elevation="10dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/quin" />
+        tools:srcCompat="@drawable/quin" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
@@ -48,6 +48,8 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
+                android:ellipsize="end"
+                android:maxLines="1"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

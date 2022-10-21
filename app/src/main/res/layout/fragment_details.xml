@@ -8,7 +8,6 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".ui.MainActivity">
 
-
     <View
         android:id="@+id/view2"
         android:layout_width="match_parent"
@@ -17,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/constraintLayout"
@@ -28,7 +27,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
 
         <ImageView
             android:id="@+id/ivAlbum"
@@ -51,7 +49,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivAlbum" />
 
-
         <TextView
             android:id="@+id/textView5"
             style="@style/CaptionTextStyle"
@@ -73,7 +70,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
     </androidx.constraintlayout.motion.widget.MotionLayout>
 
     <View
@@ -85,8 +81,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/rvMain"
@@ -109,21 +103,22 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_medium"
-                android:text="@string/description"/>
+                android:text="@string/description" />
+
             <TextView
                 android:id="@+id/tvDescription"
                 style="@style/SubTitleTextStyle"
-                android:layout_marginHorizontal="@dimen/default_margin_medium"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Король Лев (1994) Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце."/>
+                android:layout_marginHorizontal="@dimen/default_margin_medium"
+                android:text="Король Лев (1994) Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце.Львенок Симба бросает вызов дяде-убийце." />
 
             <TextView
                 style="@style/TitleTextStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/default_margin_medium"
-                android:text="@string/actor_list"/>
+                android:text="@string/actor_list" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvActorsFoto"

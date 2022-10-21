@@ -40,6 +40,17 @@
     <item name="actor_item_poster_height_percent" format="float" type="dimen">0.75</item>
     <item name="actor_item_max_lines" format="integer" type="dimen">2</item>
     <item name="actor_item_character_max_lines" format="integer" type="dimen">1</item>
+    <dimen name="fragment_detail_rating_progress_size">40dp</dimen>
+    <dimen name="fragment_detail_rating_margin_start">20dp</dimen>
+    <dimen name="fragment_detail_rating_margin_top">-20dp</dimen>
+    <dimen name="fragment_detail_rating_indicator_inset">2dp</dimen>
+    <dimen name="fragment_detail_rating_indicator_size">36dp</dimen>
+    <dimen name="fragment_detail_rating_indicator_margin_bottom">2dp</dimen>
+    <dimen name="fragment_detail_rating_indicator_track_thickness">4dp</dimen>
+    <dimen name="rating_value_max_text_size">14sp</dimen>
+    <dimen name="rating_value_min_text_size">8sp</dimen>
+    <dimen name="rating_value_step_size">1sp</dimen>
+    <dimen name="rating_value_margin">4dp</dimen>
 
     <dimen name="follow_button_height">40sp</dimen>
     <dimen name="follow_button_width">100sp</dimen>
